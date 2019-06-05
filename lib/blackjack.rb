@@ -33,7 +33,8 @@ end
 def hit?(card_total)
   # code hit? here
   prompt_user
-  if get_user_input == 'h'
+  x = get_user_input
+  if x == 'h'
     card_total += deal_card
   end
   card_total
@@ -55,7 +56,6 @@ def runner
   while card_total <= 21
     card_total = hit?(card_total)
     display_card_total(card_total)
-
   end
 end_game(card_total)
 end
